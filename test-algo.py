@@ -19,6 +19,3 @@ while sum < ranNum:
             for i in range(1,3):
                 if sum == ranNum-i :
                     print("Let's win it")
-                
-
-
