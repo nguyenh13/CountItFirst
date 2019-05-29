@@ -12,6 +12,26 @@ def checkResult(message):
     if message == "YOU WIN" or message == "YOU LOSE":
         return 0
 
+def handleInput(gameMode):
+    if gameMode == "1":
+        #Valid input is only 1 or 2
+        while 1:
+            inputNumber = input('Enter 1 or 2: ')
+            if inputNumber == "1" or inputNumber == "2":
+                break
+            else:
+                print("Invalid input")
+    else:
+        #Valid input is only 1 or 2
+        while 1:
+            inputNumber = input('Enter 1 or 3 or 5: ')
+            if inputNumber == "1" or inputNumber == "3" or inputNumber == "5":
+                break
+            else:
+                print("Invalid input")
+    return inputNumber
+
+
 
 clientSocket = socket(AF_INET, SOCK_STREAM) #TCP socket
 
@@ -29,16 +49,18 @@ while 1:
     if mode == "1":
         Port = 43500
         print("You have chosen EASY mode!")
+        #connect to the server
+        connection = clientSocket.connect((IP_address,Port))
         break
     elif mode == "2":
         Port = 43505
         print("You have chosen HARD mode!")
+        #connect to the server
+        connection = clientSocket.connect((IP_address,Port))
         break
     else:
         print("Invalid input")
 
-#connect to the server
-connection = clientSocket.connect((IP_address,Port))
 
 #After connected, player is welcomed by the server
 welcomeMessage = clientSocket.recv(2048).decode('utf-8')
@@ -55,13 +77,7 @@ print(start)
 #Game loop
 while 1:
     print("\nYOUR TURN")
-    #Valid input is only 1 or 2
-    while 1:
-        inputNumber = input('Enter 1 or 2: ')
-        if inputNumber == "1" or inputNumber == "2":
-            break
-        else:
-            print("Invalid input")
+    inputNumber = handleInput(mode)
     try:
         #Send player's input
         clientSocket.send(inputNumber.encode('utf-8'))
