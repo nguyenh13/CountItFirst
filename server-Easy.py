@@ -14,6 +14,10 @@ from datetime import datetime
 easySocket = socket(AF_INET, SOCK_STREAM) #TCP
 easySocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1) #make port reusable
 
+# checks whether sufficient arguments have been provided
+if len(sys.argv) != 2:
+    print("Correct usage: script, IP address")
+    exit()
 
 # takes the first argument from command prompt as IP address
 IP_address = str(sys.argv[1])
