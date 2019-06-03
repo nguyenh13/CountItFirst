@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>325</width>
+    <height>293</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #151515;
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="oneButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>110</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 30px;
+text-align: center;
+color: #e7e7e7;</string>
+    </property>
+    <property name="text">
+     <string>+1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="twoButton">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>110</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 30px;
+text-align: center;
+color: #e7e7e7;</string>
+    </property>
+    <property name="text">
+     <string>+2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="winNumLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 15px;
+text-align: center;
+color: #e7e7e7;</string>
+    </property>
+    <property name="text">
+     <string>Win Number:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="currNumLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 15px;
+text-align: center;
+color: #e7e7e7;</string>
+    </property>
+    <property name="text">
+     <string>Current Number:</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="currNumber">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>50</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="winNumber">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="turnLabel">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>200</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Helvetica Neue', sans-serif;
+font-weight: bold;
+font-size: 30px;
+text-align: center;
+color: #e7e7e7;</string>
+    </property>
+    <property name="text">
+     <string>YOUR TURN</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>325</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
