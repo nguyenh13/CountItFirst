@@ -1,7 +1,7 @@
-#Count-It-First
-#Networked counting game
-#CSC/CPE 4750
-#Author: Tai Doan, Hung Nguyen, Huyen Nguyen
+# Count-It-First
+# Networked counting game
+# CSC/CPE 4750
+# Author: Tai Doan, Hung Nguyen, Huyen Nguyen
 
 ## 1. Features:
 Server-client based  using TCP socket connection
