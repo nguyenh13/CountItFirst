@@ -10,8 +10,8 @@ There are 2 servers always be running concurrently for 2 game modes Easy and Har
 
 When starting the application, player is able to choose game mode.
 
-	Mode Easy: Random number generated in range [10,30], add +1 or +2.\
-	Mode Hard: Random number generated in range [30,50], add +1, +3 or +5\
+	Mode Easy: Random number generated in range [10,30], add +1 or +2
+	Mode Hard: Random number generated in range [30,50], add +1, +3 or +5
 	
 The game will start when 2 players connect to the same room (i.e. the server)
 
