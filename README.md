@@ -5,11 +5,16 @@
 
 ## 1. Features:
 Server-client based  using TCP socket connection.\
+
 There are 2 servers always be running concurrently for 2 game modes Easy and Hard.\
+
 When starting the application, player is able to choose game mode.\
+
 	Mode Easy: Random number generated in range [10,30], add +1 or +2.\
 	Mode Hard: Random number generated in range [30,50], add +1, +3 or +5\
+	
 The game will start when 2 players connect to the same room (i.e. the server)\
+
 Players will be announced what the "Win number" is from the server. Each player will take turn to input a number and send it to the server, the number will be added up to the sum. Whoever reaches the generated number first will win the game.
 
 
