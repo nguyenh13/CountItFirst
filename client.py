@@ -87,20 +87,12 @@ while 1:
         if checkResult(currentNumber) == 0:
             clientSocket.close()
             exit()
-
-        #if input is "close", close connection
-        if inputNumber == "/close":
-            closeMsg = clientSocket.recv(2048).decode('utf-8')
-            print(closeMsg)
+        #receive message from server, print it
+        fromServer = clientSocket.recv(2048).decode('utf-8')
+        print(fromServer)
+        if checkResult(fromServer) == 0:
             clientSocket.close()
             exit()
-        else:
-            #receive message from server, print it
-            fromServer = clientSocket.recv(2048).decode('utf-8')
-            print(fromServer)
-            if checkResult(fromServer) == 0:
-                clientSocket.close()
-                exit()
     #If cannot connect to server, close the connection
     except IOError:
         print("Connection error")
