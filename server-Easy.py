@@ -24,7 +24,8 @@ IP_address = str(sys.argv[1])
 # takes second argument from command prompt as port number
 Port1 = 43500       #Port for Easy mode
 
-
+#accept up to 2 connections from clients, which
+#must connect before we can move on
 TWO_CLIENTS = 2
 '''
  binds the server to an entered IP address and at the specified port number.
@@ -38,8 +39,6 @@ print('Server EASY is ready to accept client')
 
 clients = []
 
-#accept up to 2 connections from clients, which
-#must connect before we can move on
 
 # broadcast() takes 2 parameters: a message and the connection to a client
 # The function broadcasts the message to all clients whose object is not
@@ -83,9 +82,6 @@ while 1:
             print("Player ", i, " entered: ", sentence)
             sum+= int(sentence)
             print("Current Number: ", sum)
-            
-            '''code for close/shutdown'''
-            
             if sum == ranNum or sum == ranNum +1:
                 print("THE WINNER IS PLAYER ",i)
                 clients[i][0].send(b'YOU WIN')
@@ -98,27 +94,5 @@ while 1:
                 for c in clients:
                     c[0].send(curNumberMsg)
 
-
-
-
-#check if the message is "/close", if so, then close the connection
-#            if sentence == "/close":
-#                print("Client ",i," disconnected!")
-#                clients[i][0].send(b'Good Bye!')
-#                msg = b"Other client has disconnected. Chat ended"
-#                broadcast(msg,clients[i][0])
-#                clients[i][0].close()
-#                remove(clients[i][0])
-#
-#                #check if the message is "/shutdown", if so, shut down the server
-#            elif sentence == "/shutdown":
-#                print("Server is shutting down!")
-#                for c in clients:
-#                    c[0].send(b'Server is shutting down!')
-#
-#                    c[0].close()
-#                exit()
-#            else:
-#                #send received message to other client
 
 

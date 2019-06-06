@@ -1,3 +1,4 @@
+
 '''
     Count-It-First - Server HARD
     CSC/CPE 4750
@@ -24,7 +25,10 @@ IP_address = str(sys.argv[1])
 # takes second argument from command prompt as port number
 Port2 = 43505       #Port for Hard mode
 
+#accept up to 2 connections from clients, which
+#must connect before we can move on
 TWO_CLIENTS = 2
+
 #Connection socket for HARD mode
 hardSocket.bind((IP_address, int(Port2)))
 hardSocket.listen(1)
@@ -81,7 +85,7 @@ while 1:
                 broadcast(b'YOU LOSE',clients_hard[i][0],clients_hard)
                 for c in clients_hard:
                     c[0].close()
-                    exit()
+                exit()
             else:
                 curNumberMsg = b'Current Number: ' + str(sum).encode('utf-8')
                 for c in clients_hard:
